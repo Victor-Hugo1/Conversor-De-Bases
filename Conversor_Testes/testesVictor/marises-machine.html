@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora Marise Machine</title>
+
+<body>
+        <div class="imagem"></div>
+        <div class="bloco">
+
+                <div class="cabecalho">
+                        <h1>Conversor Numérico</h1><br>
+                </div>
+                <div class="form">
+                        <h3>Selecione a Base desejada</h3><br>
+                        <input id="demo1" type="text" placeholder="Digite o valor em decimal">
+                        <select id="select_conversao">
+                                <option value="octal">Octal</option>
+                                <option value="hexa">Hexadecimal</option>
+                                <option value="bin">Binário</option>
+
+                                
+
+                        </select><br><br>
+                        
+                                <div id="exibir"></div>
+
+
+                        <div class="botao">
+                                <button onclick="converter()">Converter</button>
+
+                        </div>
+
+
+                        <script>
+
+                                function converter() {
+                                        exibir.innerHTML = ``
+
+                                        var decimal = Number(demo1.value);
+
+                                        let Resultado = select_conversao.value
+
+                                        let octal = decimal.toString(8);
+
+                                        let hexadecimal = decimal.toString(16);
+
+                                        let binaria = decimal.toString(2);
+
+                                        console.log(decimal);
+                                        console.log(octal);
+                                        console.log(hexadecimal);
+                                        console.log(binaria);
+
+                                        if(Resultado == "octal"){
+                                                exibir.innerHTML = `${octal}`
+                                        }else if(Resultado == "hexa"){
+                                                exibir.innerHTML = `${hexadecimal}`
+                                        }if(Resultado == "bin"){
+                                                exibir.innerHTML = `${binaria}`
+                                        }
+                                        //document.getElementById("demo1").innerHTML = `${decimal}`;
+                                        //document.getElementById("octal").innerHTML = `${octal}`;
+                                        //document.getElementById("hexa").innerHTML = `${hexadecimal}`;
+                                        //document.getElementById("bin").innerHTML = `${binaria}`;
+
+
+                                }
+
+                                ;
+                        </script>
+                </div>
+</body>
+
+</html>
