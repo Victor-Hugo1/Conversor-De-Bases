@@ -1,2 +1,10 @@
 # Conversor-De-Bases
-Calculadora de bases para que facilite a conversão.
+
+Projeto de uma calculadora que facilita o cálculo de bases
+
+Podendo calcular bases:
+
+- Decimais
+- Binárias
+- Octais
+- Hexadecimais
