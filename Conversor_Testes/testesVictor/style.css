@@ -1,36 +1,72 @@
-body, html {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+h1{
+    text-align: center;
+    color: #f1f1f1;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+}
+h3{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+}
+
+.navegacao{
+    text-align: center;
+}
+
+.navegacao button{
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    padding: 7px;
+    margin: 10px;
+    font-family: "Poppins" sans-serif;
+    font-size: 20px;
+    color: black;
+    
+    
+    
+}
+.navegacao button:hover{
+    background-color: black;
+    color: #f1f1f1;
+}
+
+
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-  }
+    object-fit: cover;
+    z-index: -1;
+}
+
   
   * {
     box-sizing: border-box;
   }
   
-.imagem{
-  
-    background-image: url("img/qin.jpg");
-    filter:blur(8px); -webkit-filter: blur(8px);
-    height: 100%;
-    
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-  
+
 .bloco{
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    background-color: rgba(0, 0, 0, 0.76); /* Black w/opacity/see-through */
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border: 3px solid #f1f1f1;
-    border-radius: 30px;
+    border-radius: 40px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    width: 80%;
-    padding: 20px;
+    width: 45%;
+    padding: 90px;
     text-align: center;
 }
 
@@ -56,4 +92,45 @@ body, html {
 #demo4{
     display: none;
 }
-    
+.botao button{
+    border-radius: 10px;
+    color: #f1f1f1;
+    background-color: transparent;
+    width: 20%;
+    height: 20%;
+    padding: 7px ;
+    font-weight: 100;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.botao button:hover{
+    background-color: #f1f1f1;
+    color: black;
+    font-weight: bold;
+
+}
+
+input{
+    padding: 6px;
+    font-size: 15px;
+}
+select{
+    padding: 4px;
+    appearance: none;
+    cursor: pointer;
+    border-radius: 10px ;
+    background-color:transparent;
+    color: white;
+    border: 1px solid;
+    font-size: 15px;
+}
+select:hover{
+    background-color: #ffffff;
+    color: black;
+}
+option{
+    padding: 10px;
+    color: white;
+    background-color: black;
+}
