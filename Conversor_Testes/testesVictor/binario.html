@@ -10,10 +10,10 @@
 <body>
         <h1>Base Converter's</h1>
         <div class="navegacao">
-                <button><a href=""></a>Decimal</button>
-                <button><a href=""></a>Binário</button>
-                <button><a href=""></a>Octal</button>
-                <button><a href=""></a>Hexadecimal</button><br><br>
+            <a href="decimal.html"><button>Decimal</button></a>
+            <a href="binario.html"><button>Binário</button></a>
+            <a href="decimal.html"><button>Octal</button></a>
+            <a href="decimal.html"><button>Hexadecimal</button></a>
         </div>
 
 
@@ -25,18 +25,16 @@
         <div class="bloco">
 
                 <div class="cabecalho">
-                        <h1>Conversor Decimal</h1><br>
+                        <h1>Conversor Binário</h1><br>
                 </div>
                 <div class="form">
                         <h3>Selecione a base</h3><br>
                        
-                        <input id="demo1" type="text" placeholder="Digite o valor em decimal">
+                        <input id="demo1" type="text" placeholder="Digite o valor em Binário">
                         <select id="select_conversao">
                                 <option value="octal">Octal</option>
                                 <option value="hexa">Hexadecimal</option>
-                                <option value="bin">Binário</option>
-
-
+                                <option value="deci">Decimal</option>
 
                         </select><br><br>
 
@@ -55,7 +53,9 @@
 
                                         exibir.innerHTML = ``
 
-                                        var decimal = Number(demo1.value);
+                                        let binario = Number(demo1.value);
+
+                                        let decimal = parseInt(binario,2);
 
                                         let Resultado = select_conversao.value
 
@@ -63,19 +63,18 @@
 
                                         let hexadecimal = decimal.toString(16);
 
-                                        let binaria = decimal.toString(2);
-
+                
                                         console.log(decimal);
                                         console.log(octal);
                                         console.log(hexadecimal);
-                                        console.log(binaria);
+                                        console.log(binario);
 
                                         if (Resultado == "octal") {
                                                 exibir.innerHTML = `${octal}`
                                         } else if (Resultado == "hexa") {
                                                 exibir.innerHTML = `${hexadecimal}`
-                                        } if (Resultado == "bin") {
-                                                exibir.innerHTML = `${binaria}`
+                                        } if (Resultado == "deci") {
+                                                exibir.innerHTML = `${decimal}`
                                         }
 
 
