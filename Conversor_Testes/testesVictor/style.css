@@ -1,41 +1,115 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
 
+body {
+    margin: 0;
+    padding: 0;
+}
 
-
-h1{
-    text-align: center;
+h1 {
+    justify-content: flex-start;
     color: #f1f1f1;
     width: 100%;
+    height: 100%;
     font-family: "Poppins", sans-serif;
+    display: flex;
+    margin-left: 10px;
+    margin-top: 5px;
 }
-h3{
+
+h3 {
     text-align: center;
     font-family: "Poppins", sans-serif;
     font-size: 25px;
 }
 
-.navegacao{
-    text-align: center;
+.navegacao {
+    justify-content: flex-end;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.89);
+    padding: 15px;
 }
 
-.navegacao button{
+.navegacao button {
+    position: relative;
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 5px;
+
+    font-family: "Poppins";
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: var(--text-color);
+
+    background-color: var(--btn-color);
+    box-shadow: var(--shadow-color) 1px 1px 12px;
+    border-radius: 10px;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.navegacao button:focus {
+    outline-color: transparent;
+    box-shadow: var(--btn-color) 2px 2px 22px;
+}
+
+:root {
+    --text-color: rgb(255, 255, 255);
+    --shadow-color: hsla(0, 0%, 31%, 0.774);
+    --btn-color: hsl(0, 0%, 0%);
+    --bg-color: #141218;
+}
+
+.navegacao button:hover {
     background-color: rgb(255, 255, 255);
-    border-radius: 4px;
-    padding: 7px;
-    margin: 10px;
-    font-family: "Poppins" sans-serif;
-    font-size: 20px;
-    color: black;
-    
-    
-    
-}
-.navegacao button:hover{
-    background-color: black;
-    color: #f1f1f1;
+    color: #000000;
 }
 
+.navegacao button::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+    z-index: -1;
+}
 
+.navegacao button:hover::after {
+    transform: scale(4);
+    opacity: 0;
+}
+
+@keyframes ripple {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.navegacao button::before {
+    content: '';
+    pointer-events: none;
+    opacity: .6;
+    background:
+        radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+        radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+        radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+  
+    width: 100%;
+    height: 300%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    animation: bubbles 5s linear infinite both;
+}
 
 #video-background {
     position: fixed;
@@ -47,15 +121,8 @@ h3{
     z-index: -1;
 }
 
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-
-.bloco{
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.76); /* Black w/opacity/see-through */
+.bloco {
+    background-color: rgba(0, 0, 0, 0.76);
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border: 3px solid #f1f1f1;
@@ -70,67 +137,99 @@ h3{
     text-align: center;
 }
 
-.cabecalho{
+.cabecalho {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.form{
+
+.form {
     position: relative;
     text-align: center;
 }
+
 .botao {
     text-align: center;
 }
-#demo1{
+
+#demo1 {
     border-radius: 10px;
 }
-#demo2{
+
+#demo2 {
     display: none;
 }
-#demo3{
+
+#demo3 {
     display: none;
 }
-#demo4{
+
+#demo4 {
     display: none;
 }
-.botao button{
+
+.botao button {
     border-radius: 10px;
     color: #f1f1f1;
     background-color: transparent;
+    border-color: transparent;
     width: 20%;
     height: 20%;
-    padding: 7px ;
-    font-weight: 100;
+    padding: 7px;
+    font-weight: bold;
     margin-bottom: 10px;
     font-size: 15px;
-    font-weight: bold;
 }
-.botao button:hover{
+
+.botao button:hover {
     background-color: #f1f1f1;
     color: black;
-    font-weight: bold;
-
 }
 
-input{
+#exibir {
+    background-color: rgba(255, 255, 255, 0.979);
+    border-radius: 3px;
+    color: #000000;
+    width: 20%;
+    height: 25%;
+    left: 50%;
+    right: 50%;
+}
+
+input {
     padding: 6px;
     font-size: 15px;
 }
-select{
+
+select {
     padding: 4px;
     appearance: none;
     cursor: pointer;
-    border-radius: 10px ;
-    background-color:transparent;
+    border-radius: 10px;
+    background-color: transparent;
     color: white;
     border: 1px solid;
     font-size: 15px;
 }
-select:hover{
+
+select:hover {
     background-color: #ffffff;
     color: black;
 }
-option{
+
+option {
     padding: 10px;
     color: white;
     background-color: black;
+}
+
+p {
+    font-size: 35px;
+}
+
+@keyframes bubbles {
+    from {
+        transform: translate();
+    }
+    to {
+        transform: translate(0, -66.666%);
+    }
 }

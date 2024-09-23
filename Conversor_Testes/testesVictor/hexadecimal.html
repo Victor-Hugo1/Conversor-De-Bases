@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora Marise Machine</title>
+
+<body>
+        
+        <div class="navegacao">
+                <h1>Base Converter's</h1>
+                <a href="decimal.html"><button>Decimal</button></a>
+                <a href="binario.html"><button>Binário</button></a>
+                <a href="octal.html"><button>Octal</button></a>
+                <a href="hexadecimal.html"><button>Hexadecimal</button></a>
+        </div>
+
+
+        <video autoplay muted loop id="video-background">
+                <source src="gif/v.mp4" type="video/mp4">
+
+        </video>
+
+        <div class="bloco">
+
+                <div class="cabecalho">
+                        <p>Conversor Hexadecimal</p><br>
+                </div>
+                <div class="form">
+                        <h3>Selecione a base</h3><br>
+                       
+                        <input id="demo1" type="text" placeholder="Digite o valor em Hexadecimal">
+                        <select id="select_conversao">
+                                <option value="deci">Decimal</option>
+                                <option value="bin">Binário</option>
+                                <option value="octal">Octal</option>
+                                
+
+                        </select><br><br>
+
+                        <center>
+                                <div id="exibir"></div>
+                        </center>
+
+
+                        <div class="botao">
+                                <br><button onclick="converter()">Converter</button>
+
+                        </div>
+
+
+                        <script>
+
+                                function converter() {
+
+                                        exibir.innerHTML = ``
+
+                                        let hexadecimal= demo1.value;
+
+                                        let decimal = parseInt(hexadecimal, 16);
+
+                                        let Resultado = select_conversao.value
+
+                                        let octal = decimal.toString(8);
+
+                                        let binario = decimal.toString(2);
+
+                
+                                        console.log(decimal);
+                                        console.log(octal);
+                                        console.log(hexadecimal);
+                                        console.log(binario);
+
+                                        if (Resultado == "octal") {
+                                                exibir.innerHTML = `${octal}`
+                                        } else if (Resultado == "bin") {
+                                                exibir.innerHTML = `${binario}`
+                                        } if (Resultado == "deci") {
+                                                exibir.innerHTML = `${decimal}`
+                                        }
+
+
+
+                                }
+
+                                ;
+                        </script>
+                </div>
+</body>
+
+</html>

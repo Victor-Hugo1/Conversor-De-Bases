@@ -8,12 +8,13 @@
         <title>Calculadora Marise Machine</title>
 
 <body>
-        <h1>Base Converter's</h1>
+        
         <div class="navegacao">
+                <h1>Base Converter's</h1>
                 <a href="decimal.html"><button>Decimal</button></a>
                 <a href="binario.html"><button>Binário</button></a>
-                <a href="decimal.html"><button>Octal</button></a>
-                <a href="decimal.html"><button>Hexadecimal</button></a>
+                <a href="octal.html"><button>Octal</button></a>
+                <a href="hexadecimal.html"><button>Hexadecimal</button></a>
                 
         </div>
 
@@ -26,22 +27,25 @@
         <div class="bloco">
 
                 <div class="cabecalho">
-                        <h1>Conversor Decimal</h1><br>
+                        <p>Conversor Decimal</p><br>
                 </div>
                 <div class="form">
                         <h3>Selecione a base</h3><br>
                        
-                        <input id="demo1" type="text" placeholder="Digite o valor em decimal">
+                        <input id="demo1" type="text" placeholder="Digite o valor em Decimal">
                         <select id="select_conversao">
+                                <option value="bin">Binário</option>
                                 <option value="octal">Octal</option>
                                 <option value="hexa">Hexadecimal</option>
-                                <option value="bin">Binário</option>
+                                
 
 
 
                         </select><br><br>
 
-                        <div id="exibir"></div>
+                        <center>
+                                <div id="exibir"></div>
+                        </center>
 
 
                         <div class="botao">
